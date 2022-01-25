@@ -1,0 +1,25 @@
+.container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#user-input {
+    flex-basis: 300px;
+}
+
+#user-input2 {
+    flex-basis: 100px;
+}
+
+#ulContent {
+    list-style-type: none;
+}
+
+
+li{
+    list-style-type: none;
+}
