@@ -8,17 +8,26 @@
 }
 
 #user-input {
-    flex-basis: 300px;
+    margin-top: 20px;
+    flex-basis: 420px;
+    height: 18px;
 }
 
-#user-input2 {
-    flex-basis: 100px;
+#addBtn{
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 #ulContent {
+    margin: 40px;
     list-style-type: none;
 }
 
+#ulContent:hover {
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.671);
+}
 
 li{
     list-style-type: none;

@@ -1,6 +1,8 @@
 // BEGIN today's date
+const addButton = document.getElementById("addBtn");
 const date = new Date();
 options = { weekday: "short", month: "short", day: "numeric", year: "numeric" } //options for date 
+
 let today = date.toLocaleDateString("en-US", options);
 console.log(today);
 // END today's date
@@ -47,28 +49,44 @@ console.log(today);
 // }
 
 class Storage {
-    constructor (task, date) {
+    constructor (task, id) {
+        this.id = id;
         this.task = task;
-        this.dateCreated = date;
+        this.dateCreated = today;
     }
 
     // TODO: create a method that will insert the task dyanmically
-    create() {
-        this.create = JSON.parse(localStorage.setItem())
+    create(items) {
+        let value = JSON.stringify(items);
+        localStorage.setItem("Todo", value);
     }
 }
 
-// const storage = new Storage("Task", "Create Milk");
-// // storage.create;
+// const storage = new Storage();
+// storage.create;
 // console.log(storage);
 
-function addTodo2() {
-    let userInput = document.getElementById("user-input").value;
-    const storage = new Storage("Task", userInput);
+// function addTodo2() {
+//     let userInput = document.getElementById("user-input").value;
+//     let id = 0;
+//     const items = new Storage(userInput, id);
 
+//     if (userInput == '') {
+//         alert("Please input something");
+//     } else {
+//         items.create(userInput);
+//         console.log(items);
+//     }
+// }
+
+addButton.addEventListener('click', () => {
+    let userInput = document.getElementById("user-input").value; //input from user html
+    let id = 0;
+    const storage = new Storage(userInput, id);
+   
     if (userInput == '') {
-        alert("Please input something");
+        alert("Please write something!")
     } else {
-
+        console.log("storage");
     }
-}
+});
