@@ -7,15 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/style2.css">
+    <script src="/assets/js/createFunc.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <input type="text" placeholder="Enter Todo" id="user-input">
-        <button id="addBtn">+</button>
-    </div>
+
+    <form>
+        <div class="container">
+            <h1>What to do?</h1>
+            <input type="text" placeholder="Write your tasks" id="user-input" name="user-input"><br>
+
+            <div class="btn">
+                <button id="addBtn">ADD TASK +</button>
+            </div>
+
+        </div>
+    </form>
 
     <ul id="ulContent">
         <li id="li-one">Coffee</li>
