@@ -26,6 +26,14 @@
 //     }
 // };
 
+const items = JSON.parse(localStorage.getItem("Tasks"));
+for (let item of items) {
+    let UL = document.querySelector("#ulContent");
+    let LI = document.createElement("li");
+    UL.appendChild(LI);
+    LI.append(item.todos);
+}
+
 window.addEventListener('load', () => {
     const addButton = document.getElementById("addBtn");
     const deleteButton = document.getElementById("deleteBtn");
@@ -35,14 +43,20 @@ window.addEventListener('load', () => {
     let today = date.toLocaleDateString("en-US", options);
     // END today's date
 
-    let items = JSON.stringify(localStorage.getItem("Tasks"));
-    console.log(items)
+    // let items = JSON.parse(localStorage.getItem("Tasks"));
+    // console.log(items)
+
+    // for (let let items of Item) {
+        
+    // };
+
     addButton.addEventListener('click', (e) => {
         e.preventDefault();
         let taskList = JSON.parse(localStorage.getItem("Tasks")) || [];
         let userInput = document.getElementById("user-input").value;
         let UL = document.querySelector("#ulContent");
         let LI = document.createElement("li");
+        LI.classList.add("LIcreated"); //add classname for every li appended
         let text = document.createTextNode(userInput);
 
         let tasks = {
@@ -60,4 +74,6 @@ window.addEventListener('load', () => {
             alert("Successfully added!");
         }
     });
+
+    
 });
