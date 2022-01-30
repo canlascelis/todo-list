@@ -27,12 +27,24 @@
 // };
 
 const items = JSON.parse(localStorage.getItem("Tasks"));
+let deleteBtn = document.getElementsByClassName("deleteButton");
+
 for (let item of items) {
     let UL = document.querySelector("#ulContent");
     let LI = document.createElement("li");
+    let delBtn = document.createElement("button");
+    let btnTxt = document.createTextNode("DELETE");
+    delBtn.classList.add("deleteButton");
+    delBtn.appendChild(btnTxt);
+
     UL.appendChild(LI);
-    LI.append(item.todos);
+    LI.append(item.todos, delBtn);
+    
 }
+
+deleteBtn.addEventListener('click', () => {
+    alert("CLICKED");
+});
 
 window.addEventListener('load', () => {
     const addButton = document.getElementById("addBtn");
