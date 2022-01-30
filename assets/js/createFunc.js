@@ -42,9 +42,9 @@ for (let item of items) {
     
 }
 
-deleteBtn.addEventListener('click', () => {
-    alert("CLICKED");
-});
+// deleteBtn.addEventListener('click', () => {
+//     alert("CLICKED");
+// });
 
 window.addEventListener('load', () => {
     const addButton = document.getElementById("addBtn");

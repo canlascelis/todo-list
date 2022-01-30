@@ -1,3 +1,22 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url("/assets/fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url("/assets/fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: RobotoSlab;
+}
+
+h1{
+    font-family: BebasNeue;
+    font-weight: lighter;
+}
+
 .container{
     display: flex;
     flex-direction: column;
